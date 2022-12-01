@@ -1,5 +1,4 @@
-<?php
-    
+<?php    
     $server = "localhost";
     $db = "nuitinfo";
     $login = "root";
@@ -14,4 +13,6 @@
     }
 
     echo "Registre\n";
+
+    $req = 'SELECT * from ist order by idIst;';
 ?>
