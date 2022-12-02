@@ -1,3 +1,11 @@
+header#header{
+		border: solid 2px #32a1ce;
+		border-radius: 3%;
+		padding: auto;
+		margin: 20px;
+	
+}
+
 body{
 
 	background-image:url("../image/virus-infection-bacteria-flu-background_1035-18704.png");
@@ -47,3 +55,10 @@ left: 50%;
 transform: translate(-50%);
 }
 
+.tab{
+
+margin : auto;
+text-align:  center;
+width : 70%;
+
+}
