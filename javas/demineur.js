@@ -20,7 +20,7 @@ var CLICK_DROIT 	= "D";
 
 var MINE 	= "&loz;";
 var VIDE 	= "&nbsp;";
-var DRAPEAU = "&times;";
+var DRAPEAU = "x";
 
 var COULEUR_MINE 	= "#ff7f7f";
 var COULEUR_VIDE 	= "#bcc4c4";
@@ -107,14 +107,55 @@ var clicBoutonAux = function(cx, cy){
 			
 			// ... puis celle d'en bas à droite...
 			clicBoutonAux(cx+1, cy+1);
+			
 		} 
+		
+			
+		
 		// ... et si la case est une bombe
 		else if(terrain[cx][cy] == MINE){
 			document.getElementById(cx + "" + cy).style.background = "url(../img/virus.png)";
-			document.getElementById(cx + "" + cy).style.color = "transparent	";
+			document.getElementById(cx + "" + cy).style.color = "transparent";
 			alert("Vous avez une IST, bonne chance !!!!!");
 			continuerJeu = false;
 		}
+		if(terrain[cx][cy]== 0){
+			document.getElementById(cx + "" + cy).style.background = "url(../img/0.png)";
+			document.getElementById(cx + "" + cy).style.color = "transparent";
+		}
+		if(terrain[cx][cy]== 1){
+		document.getElementById(cx + "" + cy).style.background = "url(../img/1.png)";
+		document.getElementById(cx + "" + cy).style.color = "transparent";
+		}
+		if(terrain[cx][cy]== 2){
+			document.getElementById(cx + "" + cy).style.background = "url(../img/2.png)";
+			document.getElementById(cx + "" + cy).style.color = "transparent";
+		}
+		if(terrain[cx][cy]== 3){
+		document.getElementById(cx + "" + cy).style.background = "url(../img/3.png)";
+		document.getElementById(cx + "" + cy).style.color = "transparent";
+		}
+		if(terrain[cx][cy]== 4){
+			document.getElementById(cx + "" + cy).style.background = "url(../img/4.png)";
+			document.getElementById(cx + "" + cy).style.color = "transparent";
+		}
+		if(terrain[cx][cy]== 5){
+		document.getElementById(cx + "" + cy).style.background = "url(../img/5.png)";
+		document.getElementById(cx + "" + cy).style.color = "transparent";
+		}
+		if(terrain[cx][cy]== 6){
+			document.getElementById(cx + "" + cy).style.background = "url(../img/6.png)";
+			document.getElementById(cx + "" + cy).style.color = "transparent";
+		}
+		if(terrain[cx][cy]== 7){
+		document.getElementById(cx + "" + cy).style.background = "url(../img/7.png)";
+		document.getElementById(cx + "" + cy).style.color = "transparent";
+		}
+		if(terrain[cx][cy]== 8){
+		document.getElementById(cx + "" + cy).style.background = "url(../img/8.png)";
+		document.getElementById(cx + "" + cy).style.color = "transparent";
+		}
+		
 	}
 };
 
@@ -132,16 +173,19 @@ var clicDroitBouton = function(cx, cy){
 		if(affTerrain[cx][cy] == CLICK_DROIT){
 			// ... on remet les valeurs par défaut du bouton
 			document.getElementById(cx + "" + cy).style.backgroundColor = COULEUR_VIDE;
+			document.getElementById(cx + "" + cy).style.background = "none";
+			document.getElementById(cx + "" + cy).style.color = "transparent";
 			affTerrain[cx][cy] = DEFAUT;
 			elt.innerHTML = VIDE;
 		}
 		// ... sinon si c'est remis à la valeur par défaut...
 		else if(affTerrain[cx][cy] == DEFAUT){
 			// ... on met que la case a été clickée par le bouton droit
-			document.getElementById(cx + "" + cy).style.backgroundColor = COULEUR_DRAPEAU;
+			document.getElementById(cx + "" + cy).style.background = "url(../img/capote.png)";
+			document.getElementById(cx + "" + cy).style.color = "transparent";
 			affTerrain[cx][cy] = CLICK_DROIT;
-			elt.innerHTML = DRAPEAU;
 		}
+
 	}
 	
 	// On teste si le joueur a gagné
