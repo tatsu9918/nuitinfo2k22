@@ -21,10 +21,19 @@ h1.demineur_h1{
 div.demineur_info_IST{
 	width: 24%;
 	margin: 0 2%;
-	border: 5px solid black;
+	border: 2px solid #32a1ce;
 	border-radius: 10px;
-	background-color: #cccdd0;
 }
+div.sousblock{
+
+	background-color: white;
+	height : 600px;
+	margin : 10px 5px;
+	border: 2px solid #32a1ce;
+	border-radius: 10px;
+	padding: 10px;
+}
+
 div.demineur_jeu{
 	width: 46%;
 	border: 5px solid black;
@@ -56,10 +65,9 @@ left: 50%;
 transform: translate(-50%);
 }
 
-.tab{
-
-margin : auto;
-text-align:  center;
+div.tab{
+margin: 20px auto 0;
+text-align: justify;
 width : 70%;
 
 }
