@@ -1,0 +1,47 @@
+body{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div {
+    max-width: 500px;
+    display: flex;
+    border: solid 1px;
+    border-color: blueviolet;
+    flex-wrap: wrap;
+}
+
+.nom{
+    width: 90%;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.image{
+    margin: auto;
+    width: 9%;
+}
+
+.description {
+    width: 100%;
+}
+
+.symptome{
+    width: 80%;
+}
+
+.guerissable{
+    width: 33%;
+}
+
+.type{
+    width: 33%;
+}
+
+.transmission{
+    width: 33%;
+}
+
+.l1, .l2, .l3, .l4 {
+    width: 100%;
+} 
