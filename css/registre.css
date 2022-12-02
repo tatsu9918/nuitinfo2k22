@@ -18,9 +18,14 @@ div {
     align-items: flex-start;
 }
 
-.image{
+.divImage{
     margin: auto;
-    width: 9%;
+    width: 8%;
+    /* max-width: 150px; */
+}
+
+.image{
+    width: 50px;
 }
 
 .description {
