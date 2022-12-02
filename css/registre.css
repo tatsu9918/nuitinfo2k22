@@ -1,6 +1,7 @@
 body{
     margin-left: auto;
     margin-right: auto;
+    font-size: smaller;
 }
 
 div {
@@ -30,6 +31,10 @@ div {
     width: 80%;
 }
 
+.vaccin {
+    width: 19%;
+}
+
 .guerissable{
     width: 33%;
 }
@@ -39,9 +44,10 @@ div {
 }
 
 .transmission{
-    width: 33%;
+    width: 32%;
 }
 
 .l1, .l2, .l3, .l4 {
     width: 100%;
+    justify-content: center;
 } 
