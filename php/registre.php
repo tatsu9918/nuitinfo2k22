@@ -14,11 +14,15 @@
 
     echo "Registre\n";
 
-    $req = 'SELECT * from ist order by idIst;';
-
-    $req = $bdd->prepare('SELECT dureeprepa FROM table1');
+    //$req = $dbh->prepare("SELECT * from ist order by idIst");
+    //$req->execute();
+    //$data=$req->fetchAll(PDO::FETCH_ASSOC);
+    //var_dump($data);
+    //exit();
+    
+    $req = $linkpdo->prepare("SELECT * from ist where idIst = 1");
     $req->execute();
-    $data=$req->fetchAll(PDO::FETCH_ASSOC);
-    var_dump($data);
-    exit();
+    foreach ($req as $row) {
+    print_r($row);
+}
 ?>
