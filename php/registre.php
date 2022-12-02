@@ -15,4 +15,10 @@
     echo "Registre\n";
 
     $req = 'SELECT * from ist order by idIst;';
+
+    $req = $bdd->prepare('SELECT dureeprepa FROM table1');
+    $req->execute();
+    $data=$req->fetchAll(PDO::FETCH_ASSOC);
+    var_dump($data);
+    exit();
 ?>
