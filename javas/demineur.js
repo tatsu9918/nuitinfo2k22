@@ -1,3 +1,5 @@
+/** on a garder la syntaxe d'un démineur**/
+
 var x = 8;
 var y = 10;
 var nb_mine = 9;
@@ -108,8 +110,9 @@ var clicBoutonAux = function(cx, cy){
 		} 
 		// ... et si la case est une bombe
 		else if(terrain[cx][cy] == MINE){
-			document.getElementById(cx + "" + cy).style.backgroundColor = COULEUR_MINE;
-			alert("BOOM ! Lance un nouveau jeu !");
+			document.getElementById(cx + "" + cy).style.background = "url(../img/virus.png)";
+			document.getElementById(cx + "" + cy).style.color = "transparent	";
+			alert("Vous avez une IST, bonne chance !!!!!");
 			continuerJeu = false;
 		}
 	}
@@ -151,7 +154,7 @@ var clicDroitBouton = function(cx, cy){
 var dessinTerrain = function(){
 	// On met à jour le plateau
 	var plateau = document.getElementById("plateau");
-	plateau.innerHTML = "";
+	plateau.innerHTML = " ";
 	
 	// On parcourt les lignes...
 	for(var i = 0; i < x; i++){
@@ -264,7 +267,7 @@ var testGagne = function(){
 		}
 	}
 	
-	alert("Bon bah j'crois que t'es bon avec cette difficulté. Tente une plus difficile!");
+	alert("Vous êtes SAFE !!!! \n la clef à envoyer au bot discord est : acicYN8J35Kx77H");
 	continuerJeu = false;
 }
 
